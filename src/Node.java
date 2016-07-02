@@ -8,6 +8,11 @@ public class Node {
     this.next = next;
   }
   
+  public Node(String data)
+  {
+    this(data, null);
+  }
+  
   public void setData(String data) {
     this.data = data;
   }
