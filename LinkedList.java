@@ -38,6 +38,9 @@ public class LinkedList {
       if(head == null)
         last = null;
       return true;
-    }return true;
+    }
+    Node pre = head;
+    
+    return true;
    }
 }
