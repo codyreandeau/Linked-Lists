@@ -10,7 +10,6 @@ public class Main {
     list.add("Lists");
     list.add("Are");
     list.add("Awesome");
-    list.addFirst("I Think");
     
     System.out.println("Items in the list:");
     

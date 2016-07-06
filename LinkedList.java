@@ -14,6 +14,14 @@ public class LinkedList {
     }
   }
   
+  //Method to add to the beginning of the linked list
+  public void addFirst(String data)
+   {
+      Node temp = new Node(data);
+      temp.setNext(head);
+      head = temp;
+   }
+  
   //Method to check if each node is empty
   public boolean isEmpty() {
     return head == null;
