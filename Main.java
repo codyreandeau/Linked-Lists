@@ -17,5 +17,16 @@ public class Main {
     //Print out items in the list
     list.print();
     
+    System.out.println("----------------------------");
+    System.out.println("Removing nodes from the list");
+    System.out.println("----------------------------");
+    
+    //Remove Elements from the list
+    list.remove("Lists");
+    list.remove("Linked");
+    
+    //Print out items in the list
+    list.print();
+    
     }
 }
