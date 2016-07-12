@@ -28,5 +28,8 @@ public class Main {
     //Print out items in the list
     list.print();
     
+    //Print out size of the list
+    System.out.println("There are now " + list.size() + " items in the list");
+    
     }
 }

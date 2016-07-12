@@ -45,6 +45,20 @@ public class LinkedList {
     }
   }
   
+ /**
+   * Method that records the size of the list
+   */
+  
+  public int size() {
+    int counter = 0;
+    Node temp = head;
+    while(temp!=null) {
+      counter++;
+      temp = temp.getNext();
+    }
+    return counter;
+ }
+  
   /**
    * Method to remove a node from a list
    */
