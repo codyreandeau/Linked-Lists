@@ -24,6 +24,7 @@ public class Main {
     //Remove Elements from the list
     list.remove("Lists");
     list.remove("Linked");
+    list.insert(2, "Hello");
     
     //Print out items in the list
     list.print();

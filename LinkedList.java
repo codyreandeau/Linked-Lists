@@ -16,15 +16,44 @@ public class LinkedList {
     }
   }
   
+ /**
+  * Method to insert items into our linked list
+  */
+  public void insert(int index, String data) {
+    if(index < 0 || index > size()) {
+      return;
+    }
+    
+    if(index==0) {
+      head = new Node(data, head);
+      if(tail==null)
+        tail = head;
+      return;
+    }
+    
+    Node pre = head;
+    for(int i=0; i <= index -1; i++) {
+      pre = pre.getNext();
+    }
+    
+   // pre.setNext(new Node(data, pre.getNext());
+    
+    //if 
+  }
+  
   /**
    * Method to add to the beginning of the linked list
    */
-  public void addFirst(String data)
-   {
+  public void addFirst(String data){
       Node temp = new Node(data);
+      //Check if list is empty
+      if(isEmpty()){
+         head = temp;
+      }else{
       temp.setNext(head);
       head = temp;
    }
+  }
   
   /**
    * Method to check if each node is empty
@@ -48,7 +77,6 @@ public class LinkedList {
  /**
    * Method that records the size of the list
    */
-  
   public int size() {
     int counter = 0;
     Node temp = head;
