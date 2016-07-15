@@ -2,15 +2,16 @@ public class Main {
   
   public static void main(String[] args) {
     
-    //Create linked list
+    //Create linked lists
     LinkedList list = new LinkedList();
     
     //Add items to the list
     list.add("Linked");
-    list.add("Lists");
     list.add("Are");
     list.add("Awesome");
     list.addFirst("I Think");
+    list.insert(2, "Lists");
+    list.insert(4, "Wicked");
     
     System.out.println("Items in the list:");
     
@@ -22,9 +23,8 @@ public class Main {
     System.out.println("----------------------------");
     
     //Remove Elements from the list
-    list.remove("Lists");
     list.remove("Linked");
-    list.insert(2, "Hello");
+    list.remove("Wicked");
     
     //Print out items in the list
     list.print();

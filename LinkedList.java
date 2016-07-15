@@ -20,10 +20,11 @@ public class LinkedList {
   * Method to insert items into our linked list
   */
   public void insert(int index, String data) {
+    //Check if index is less than 0 or greater than the total size of the list
     if(index < 0 || index > size()) {
       return;
     }
-    
+    //Check if index is zero 
     if(index==0) {
       head = new Node(data, head);
       if(tail==null)
@@ -32,13 +33,11 @@ public class LinkedList {
     }
     
     Node pre = head;
-    for(int i=0; i <= index -1; i++) {
+    for(int i=1; i <= index -1; i++) {
       pre = pre.getNext();
     }
     
-   // pre.setNext(new Node(data, pre.getNext());
-    
-    //if 
+    pre.setNext(new Node(data, pre.getNext()));
   }
   
   /**
