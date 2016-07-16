@@ -7,6 +7,7 @@ public class LinkedList {
   * Method to add items to our linked list
   */
   public void add(String data) {
+    //Check if head is null
     if(isEmpty()) {
       head = new Node(data);
       tail = head;
@@ -66,6 +67,7 @@ public class LinkedList {
    */
   public void print() {
     Node temp = head;
+    //print out nodes until we reach null
     while(temp!= null)
     {
       System.out.println(temp.getData());

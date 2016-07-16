@@ -1,5 +1,6 @@
 public class LinkedList {
   
+  //Declare Nodes 
   private Node head;
   private Node tail;
 
@@ -7,11 +8,12 @@ public class LinkedList {
   * Method to add items to our linked list
   */
   public void add(String data) {
-    //Check if head is null
+    //Check if head is null, if so, create head
     if(isEmpty()) {
       head = new Node(data);
       tail = head;
     }else{
+    //if head is not null, add to the end of the list
       tail.setNext(new Node(data));
       tail = tail.getNext();
     }
@@ -25,23 +27,26 @@ public class LinkedList {
     if(index < 0 || index > size()) {
       return;
     }
-    //Check if index is zero 
+    //Check if index is zero, if so, create head
     if(index==0) {
       head = new Node(data, head);
+    //If tail is null, then set tail equal to head
       if(tail==null)
         tail = head;
       return;
     }
     
+    //Find the index of where the node should be placed by finding the predecessor
     Node pre = head;
     for(int i=1; i <= index -1; i++) {
       pre = pre.getNext();
     }
     
+    //create a new node once the predecessor is found
     pre.setNext(new Node(data, pre.getNext()));
   }
   
-  /**
+  /** 
    * Method to add to the beginning of the linked list
    */
   public void addFirst(String data){
