@@ -44,6 +44,10 @@ public class LinkedList {
     
     //create a new node once the predecessor is found
     pre.setNext(new Node(data, pre.getNext()));
+    
+    //if inserting last in the list, tail must point to new node
+    if (tail.getNext() == null)
+      tail = pre.getNext();
   }
   
   /** 
