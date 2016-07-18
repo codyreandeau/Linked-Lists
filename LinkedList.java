@@ -4,6 +4,14 @@ public class LinkedList {
   private Node head;
   private Node tail;
 
+  
+/**
+  * Method to get access to head
+  */
+ public Node getHead() {
+    return head;
+  }
+
  /**
   * Method to add items to our linked list
   */
@@ -83,6 +91,17 @@ public class LinkedList {
       temp = temp.getNext();
     }
   }
+  
+  
+  /**
+   * Recursive method to print out all items in reverse order
+   */
+  public void printReverse(Node node) {
+    if(node.getNext() != null) { 
+        printReverse(node.getNext());  
+    }
+    System.out.println(node.getData()); 
+}
   
  /**
    * Method that records the size of the list
