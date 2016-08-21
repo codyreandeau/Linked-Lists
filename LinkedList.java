@@ -4,7 +4,6 @@ public class LinkedList {
   private Node head;
   private Node tail;
 
-  
 /**
   * Method to get access to head
   */
@@ -62,13 +61,10 @@ public class LinkedList {
    * Method to add to the beginning of the linked list
    */
   public void addFirst(String data){
-      Node temp = new Node(data);
+      head = new Node(data, head);
       //Check if list is empty
-      if(isEmpty()){
-         head = temp;
-      }else{
-      temp.setNext(head);
-      head = temp;
+      if(tail == null) {
+        tail = head;
    }
   }
   
