@@ -32,5 +32,12 @@ public class Main {
     //Print out size of the list
     System.out.println("There are now " + list.size() + " items in the list");
     
+    System.out.println("-----------------------------");
+    System.out.println("Traversing the list backwards");
+    System.out.println("-----------------------------");
+    
+    //Print out elements in reverse order
+    list.printReverse(list.getHead());
+    
     }
 }

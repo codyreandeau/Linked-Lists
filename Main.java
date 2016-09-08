@@ -39,5 +39,15 @@ public class Main {
     //Print out elements in reverse order
     list.printReverse(list.getHead());
     
+    System.out.println("-----------------------------");
+    System.out.println("Editing Nodes");
+    System.out.println("-----------------------------");
+    
+    //edit nodes
+    list.edit(4, "Cool");
+    list.edit(1, "Linked");
+    
+    list.print();
+    
     }
 }

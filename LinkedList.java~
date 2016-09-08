@@ -61,13 +61,10 @@ public class LinkedList {
    * Method to add to the beginning of the linked list
    */
   public void addFirst(String data){
-      Node temp = new Node(data);
-      //Check if list is empty
-      if(isEmpty()){
-         head = temp;
-      }else{
-      temp.setNext(head);
-      head = temp;
+      head = new Node(data, head);
+      //Check if tail is empty
+      if(tail == null) {
+        tail = head;
    }
   }
   
