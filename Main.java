@@ -44,8 +44,8 @@ public class Main {
     System.out.println("-----------------------------");
     
     //edit nodes
-    list.edit(4, "Cool");
-    //list.edit(1, "Linked");
+    //list.edit(4, "Cool");
+    list.edit(1, "Listsssss");
     
     list.print();
     
