@@ -141,16 +141,20 @@ public class LinkedList {
    * Method to edit the node
    */
  public void edit(int index, String data) {
-   Node newNode = new Node(data, null);
-    
  //Find the index 
     Node pre = head;
     for(int i=1; i <= index -1; i++) {
       pre = pre.getNext();
     }
     
-  //create a new node once the predecessor is found
     pre.setData(data);
+    
+  //create a new node once the predecessor is found
+   Node next = head;
+   for(int i=1; i <= index; i++) {
+      next = next.getNext();
+    }
+   next.setNext(new Node(pre.getData()));
  }
 }
 

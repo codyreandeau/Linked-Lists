@@ -45,7 +45,7 @@ public class Main {
     
     //edit nodes
     list.edit(4, "Cool");
-    list.edit(1, "Linked");
+    //list.edit(1, "Linked");
     
     list.print();
     
