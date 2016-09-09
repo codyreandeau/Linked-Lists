@@ -32,7 +32,7 @@ public class LinkedList {
   public void insert(int index, String data) {
     //Check if index is less than 0 or greater than the total size of the list
     if(index < 0 || index > size()) {
-      return;
+      throw new IndexOutOfBoundsException("Index out of bounds.");
     }
     //Check if index is zero, if so, create head
     if(index==0) {
@@ -141,6 +141,15 @@ public class LinkedList {
    * Method to edit the node
    */
 public void edit(int index, String data) {
+  
+  if (index==0) {
+    head.setData(data);
+    return;
+  }
+  
+  if (index < 0 || index > size()) {
+    throw new IndexOutOfBoundsException("Index out of bounds.");
+  }
 
      Node pre = head;
      Node temp = null;
